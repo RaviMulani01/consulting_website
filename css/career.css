@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+header {
+    min-height: 100vh;
+    width: 100%;
+    
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 150px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li  {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p {
+    margin:10px 0 40px;
+    font-size: 16px;
+    color:#fff;
+    }
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s ;
+}
+nav .fa{
+    display: none; }
+    @media (max-width:700px) {
+        .text-box h1 {
+            font-size: 20px;
+        }
+        .nav-links ul li {
+            display: block;
+        }
+        .nav-links {
+            position: absolute;
+            background-color: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px ;
+            z-index: 2;
+            
+        }
+        nav .fa {
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+          
+        }
+        .nav-links ul {
+            padding: 30px;
+        }
+    }
+
+/*  Dark mode */
+
+code {
+    color: firebrick;
+  }
+  
+  .darkmod {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+  .darkmod input {
+    margin-right:0.3rem;
+  }
+  .darkToggle {
+   
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+  
+   
+  }
+  
+  .darkToggle:checked {
+    background: rgb(19, 9, 9);
+  }
+  
+  .dark {
+    color: white;
+    background: rgb(22, 10, 10);
+  }
+
+
+/*-----    advisory   --------*/
+
+
+/*-----    support   --------*/
+.support h1 {
+    text-align: center;
+    padding-top: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+   color: #16144e;
+   margin-bottom: 60px;
+}
+.support-col {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+    flex-basis: 44%;
+}
+
+
+.col1 h2 {
+    font-weight: bolder;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f44336;
+    text-align: center;
+}
+.col1 p {
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+}
+@media (max-width:700px) {
+.support-col  {
+    display: block;
+}
+.col1 {
+    margin: 50px;
+}
+}
+
+
+/*-----    footer  --------*/
+
+footer {
+    width: 100%;
+    position:relative;
+    background:linear-gradient(to right, #f44336, #2d0b00);
+    color: #fff;
+    padding:100px 0 30px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 100px;
+}
+.f-row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.column1 {
+    flex-basis: 23%;
+    padding: 10px;
+}
+.column1:nth-child(2), .column1:nth-child(3) {
+    flex-basis: 15%;
+}
+.f-logo {
+    width: 80%;
+    margin-bottom: 30px;
+}
+.column1 h3 {
+    width: fit-content;
+    margin-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+.column1 ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    }
+    .column1 ul li a {
+        text-decoration: none;
+        color:white ;
+    }
+    .column1 ul li a:hover {
+        color: #000;
+     }
+    form {
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 50px;
+    }
+#fa {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+form #f-mail{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+}
+::placeholder {color: white;}
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fa {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+   
+}
+@media (max-width:940px) {
+    .social-icons .fa {
+        margin: 15px;
+   
+    }
+  form input {
+      width: 120px;
+  }
+}
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+    
+}
+.copyright {
+    text-align: center;
+}
+/*-----    social icons hover effect --------*/
+
+.fa-facebook:hover {
+    background-color: blue;
+    color: white;
+   transition: 0.5s;
+  
+}
+.fa-twitter:hover {
+    background-color: #1DA1F2;
+    color: white;
+    transition: 0.5s;
+}
+.fa-whatsapp:hover {
+    background-color:#25D366;
+    color: white;
+    transition: 0.5s;
+}
+.fa-pinterest:hover {
+    background-color: #E60023;
+    color: white;
+    transition: 0.5s;
+}
+.fa-instagram:hover {
+    background-color: #E1306C;
+    color: white;
+    transition: 0.5s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.banner{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.about{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.about >h2{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+
+.about >h2:hover{
+    color: #00008B;
+    text-decoration: underline;
+    
+}
+.ban  {
+    margin-top: 100px;
+    margin-left: 0;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing:5px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    padding: 30px;
+    background-color: #2c7bfe;
+    width: 100%;
+}
+
+
+.card, .story{
+    padding: 2rem;
+    max-width: 20rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;  
+}
+
+.f-card{
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 20rem;
+    border: 1px solid black;
+    color: white;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#h2-fjobs{
+    text-align: center;
+    margin: 1rem;
+    text-decoration: underline;
+}
+#h2-fjobs:hover{
+    color: #00008B;
+}
+
+.f-card:hover, .story:hover, .job-card:hover{
+    box-shadow: 10px 10px 5px 0 rgb(43 10 61 / 20%);
+  
+}
+.card:hover h3{ 
+    color:  #00008B;;
+    text-decoration: underline;
+}
+
+.card:hover{
+    box-shadow: 10px 10px 5px 0 rgb(43 10 61 / 20%);
+    transform: translate(-10px, -3px) scale(1.02);
+    
+}
+
+.working, #employee-story, #fjobs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+
+}
+
+
+
+#h2-working{
+    background-color: yellow;
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+#latest-jobs{
+    text-align: center;
+ 
+    margin: 1rem;
+    text-decoration: underline;
+}
+#latest-jobs:hover{
+    color:  #00008B;
+}
+
+.last{
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: blueviolet;
+}
+
+
+.card-story img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card-story> h4:hover{
+    color:  #00008B;
+}
+.card-story{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;   
+    row-gap: 2rem;
+}
+
+#h2emstory{
+    padding: 1rem;
+    margin: 1rem;
+    background-color: yellow;
+    width: 50%;
+    margin-left: auto;
+    white-space: nowrap;
+    text-align: start;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.job-card {
+    padding: 1.5rem;
+    background-color: gainsboro;
+    display: flex;
+    margin: 1.5rem;
+    flex-direction: column;
+    
+}   
+
+.job-role {
+    text-decoration: underline;
+    color: black;
+    transition: color 400ms;
+    cursor: pointer;
+    margin: 1rem;
+}
+.job-role:hover {
+    color: orange;
+    
+}
+.job-location {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.job-location svg {
+    width: 1rem;
+    height: 3rem;
+}
+.tag-list {
+    display: flex;
+    column-gap: 0.8rem;
+    flex-flow: row wrap;
+    margin: 1rem;
+    padding-right: 3rem;
+}
+
+.tag-list > button {
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.tag-list > button:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+@media only screen and (max-width: 700px)  {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    #h2-working {
+        width: 80%;
+    }
+    .card-container {
+        width: 100%;
+    }
+    #h2emstory {
+        width: 80%;
+        font-size: 15px;
+    }}
+@media only screen and (max-width: 320px)  {
+  
+    .card{
+        width: 90%;
+    }
+    .job-card {
+        width: 70%;
+        position: relative;
+        left: 8%;
+    }
+    .job-card button {
+        margin: 10px;
+    }
+    #h2emstory {
+        width: 80%;
+        font-size: 10px;
+    }
+    .story {
+        width: 80%;
+          
+    }
+    .job-role {
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.circle-border {
+    border: 3px solid skyblue;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    transition: all 300ms;
+}
+.circle-border svg {
+    padding: 3px;
+    color: skyblue;
+}
+
+.circle-border:hover {
+    background-color: skyblue;
+}
+.circle-border:hover svg {
+    color: white;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+@media (max-width:940px) {
+    .social-icons .fa {
+        margin: 15px;
+   
+    }
+
+ form #f-mail{
+      width: 120px;
+  }
+}
